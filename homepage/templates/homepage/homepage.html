@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+	<div class="parallax">
+		<div class="hero-text">
+		<h1>Pomagamy spełniać marzenia</h1>
+		<p>Bo każdy ma prawo do luksusu</p>
+		<button type="button" class="btn btn-outline-danger">Sprawdź naszą ofertę</button>
+		</div>
+	</div>
+
+	<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom" style="text-align: center">Sprawdź naszą ofertę</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon bg-danger bg-gradient">
+          <img src="/static/images/car2.png" height="80 px" alt="">
+        </div>
+        <h4>Auto dopasowane do potrzeb</h4>
+        <p>Oferujemy auta w szerokim zakresie zastosowań.
+			Niezależnie od tego, czy potrzebujesz samochodu
+			transportowego, terenowego, miejskiego, lub po
+			prostu potrzebujesz wygodnego i stylowego środku transportu,
+			u nas znajdziesz coś dla siebie.
+		</p>
+        <a href="#" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-danger bg-gradient">
+          <img src="/static/images/world.png" height="55 px" alt="">
+        </div>
+        <h4>Wypożycz z każdego kraju</h4>
+        <p>Mamy punkty dostępu do aut w każdym kraju w Europie. Przejrzyj dostępne auta w twojej okolicy.</p>
+        <a href="#" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-danger bg-gradient">
+          <img src="/static/images/payment.png" height="70 px" alt="">
+        </div>
+        <h4>Proste warunki opłat</h4>
+        <p>Wpłacasz ustaloną kwotę za okres wypożyczenia na start oraz wyrównanie ceny za zużyte paliwo po okresie wypożyczenia.</p>
+        <a href="#" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

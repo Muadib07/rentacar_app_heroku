@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from decouple import config
 import dj_database_url
+import django_heroku
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +30,8 @@ SECRET_KEY = "chomik"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['heroku-car-rental-app-smp.herokuapp.com']
+ALLOWED_HOSTS = ['heroku-car-rental-app-smp.herokuapp.com',
+                 '127.0.0.1']
 #ALLOWED_HOSTS = ["rentacar_app.herokuapp.com"]
 
 
@@ -187,6 +190,7 @@ LOGOUT_REDIRECT_URL = '/'
 # DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
 
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
+django_heroku.settings(locals())

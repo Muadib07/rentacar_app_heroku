@@ -22,12 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = "chomik"
+#SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["rentacar_app.herokuapp.com"]
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ["rentacar_app.herokuapp.com"]
 
 
 # Application definition
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'cars',
     'user_contact',
     'facilities',
+    'django_filters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,13 +85,6 @@ WSGI_APPLICATION = 'rentacar_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.sqlite3',
-#          'NAME': 'db.sqlite3',
-#      }
-# }
 
 
 DATABASES = {
@@ -185,10 +181,10 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
-EMAIL_BACKEND = config("EMAIL_BACKEND")
-SENDGRID_API_KEY = config("SENDGRID_API_KEY")
-
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+# EMAIL_BACKEND = config("EMAIL_BACKEND")
+# SENDGRID_API_KEY = config("SENDGRID_API_KEY")
+#
+# DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 
 
 prod_db  =  dj_database_url.config(conn_max_age=500)

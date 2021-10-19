@@ -146,8 +146,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
-STATIC_ROOT = "C:/Users/mateu/OneDrive/Desktop/projekt2.0Git/Rentacar-business-app/rentacar_app/static"
-#STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static_cdn')
+#STATIC_ROOT = "C:/Users/mateu/OneDrive/Desktop/projekt2.0Git/Rentacar-business-app/rentacar_app/static"
+STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 
 #'C:/projects/DjangoProjects/Tasker/mattask/task_view/static',
 STATIC_URL = '/static/'
@@ -157,9 +157,9 @@ STATIC_URL = '/static/'
 #TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
 
 
-# STATICFILES_DIRS = [
-#     "C:/Users/mateu/OneDrive/Desktop/projekt2.0Git/Rentacar-business-app/rentacar_app/static",
-# ]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 #BASE_DIR = "http://127.0.0.1:8000"

@@ -22,9 +22,13 @@ from homepage.views import (
     homepage
 )
 
+app_name = 'main_app'
+
+#path('', homepage, name="homepage"),
 
 urlpatterns = [
-    path('', homepage, name="homepage"),
+
+    path('', include("homepage.urls")),
     path('cars/', include("cars.urls")),
     path('user_account/', include("user_account.urls")),
     path('user_contact/', include("user_contact.urls")),

@@ -61,13 +61,12 @@ def add_car(request):
         form = CarsForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(redirect_to=reverse("add-car"))
+            return HttpResponseRedirect(redirect_to=reverse("main_app:add-car"))
     else:
         form = CarsForm
         if 'submitted' in request.GET:
             submitted = True
-
-    return render(request, "cars/add_car.html", {'form':form, 'submitted':submitted})
+    return render(request, "cars/add_car.html", {'form': form, 'submitted': submitted})
 
 
 class CarsDetailView(DetailView):
@@ -87,6 +86,7 @@ def search_car(request):
         return render(request, "cars/search_car.html", {'query': search, 'query_base': cars})
     else:
         return render(request, "cars/search_car.html", {})
+
 
 
 @login_required(login_url="/user_account/login/")
